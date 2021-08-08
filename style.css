@@ -1,0 +1,53 @@
+
+/* Variable in css */
+:root {
+    --textColor: rgb(61, 53, 53);
+    --backColor: rgb(241, 234, 231);
+    --shadowColor: #24ffbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--textColor);
+    font-weight: 700;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--backColor);
+}
+
+a {
+    position: relative;
+    top: 7px;
+    left: -40px;
+}
+
+input {
+    width: 0px;
+    outline: none;
+    border: none;
+    font-size: medium;
+    transition: 0.2s linear;
+}
+
+.searchBox:hover input {
+    width: 250px;
+    border: 1px solid;
+    padding: 10px;
+    background-color: yellow;
+    box-shadow: 2px -1px 20px var(--shadowColor)
+    ,9px 8px 0px rgb(0 0 0 / 15%);
+    animation: btnAnimation 1s 1;
+}
+
+@keyframes btnAnimation {
+    from {
+        transform: scale(1.2);
+    }
+}
